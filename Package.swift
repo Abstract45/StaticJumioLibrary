@@ -11,6 +11,7 @@ let package = Package(
         .library(
             name: "StaticJumioLibrary",
             targets: ["StaticJumioLibrary"]),
+        .library(name: "Netverify", type: .static, targets: ["StaticJumioLibrary"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,7 +28,6 @@ let package = Package(
         .binaryTarget(name: "JumioCore", path: "frameworks/JumioCore.xcframework"),
         .binaryTarget(name: "JumioNFC", path: "frameworks/JumioNFC.xcframework"),
         .binaryTarget(name: "Microblink", path: "frameworks/Microblink.xcframework"),
-        .binaryTarget(name: "NetVerify", path: "frameworks/NetVerify.xcframework"),
         .binaryTarget(name: "NetVerifyBarcode", path: "frameworks/NetVerifyBarcode.xcframework"),
         .binaryTarget(name: "SocketIO", path: "frameworks/SocketIO.xcframework"),
         .binaryTarget(name: "Starscream", path: "frameworks/Starscream.xcframework"),
