@@ -1,6 +1,0 @@
-framework module JumioIProov {
-  umbrella header "JumioIProov.h"
-
-  export *
-  module * { export * }
-}
