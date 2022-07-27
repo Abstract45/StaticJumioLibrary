@@ -11,7 +11,6 @@ let package = Package(
         .library(
             name: "StaticJumioLibrary",
             targets: ["StaticJumioLibrary"]),
-        .library(name: "Netverify", type: .static, targets: ["StaticJumioLibrary"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,14 +21,19 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "StaticJumioLibrary",
-            dependencies: []),
-        .binaryTarget(name: "BAMCheckout", path: "frameworks/BAMCheckout.xcframework"),
-        .binaryTarget(name: "DocumentVerification", path: "frameworks/DocumentVerification.xcframework"),
-        .binaryTarget(name: "JumioCore", path: "frameworks/JumioCore.xcframework"),
-        .binaryTarget(name: "JumioNFC", path: "frameworks/JumioNFC.xcframework"),
-        .binaryTarget(name: "Microblink", path: "frameworks/Microblink.xcframework"),
-        .binaryTarget(name: "NetVerifyBarcode", path: "frameworks/NetVerifyBarcode.xcframework"),
-        .binaryTarget(name: "SocketIO", path: "frameworks/SocketIO.xcframework"),
-        .binaryTarget(name: "Starscream", path: "frameworks/Starscream.xcframework"),
+            dependencies: [],
+            linkerSettings: [
+                .linkedFramework("Netverify"),
+                .linkedFramework("NetverifyBarcode"),
+                .linkedFramework("Microblink"),
+                .linkedFramework("Starscream"),
+                .linkedFramework("JumioNFC"),
+                .linkedFramework("SocketIO"),
+                .linkedFramework("JumioCore"),
+                .linkedFramework("BAMCheckout"),
+                .linkedFramework("DocumentVerification"),
+                .linkedFramework("JumioiProov")
+
+            ])
     ]
 )
