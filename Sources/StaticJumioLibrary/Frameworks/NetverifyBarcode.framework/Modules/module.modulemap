@@ -1,6 +1,0 @@
-framework module NetverifyBarcode {
-  umbrella header "NetverifyBarcode.h"
-
-  export *
-  module * { export * }
-}
