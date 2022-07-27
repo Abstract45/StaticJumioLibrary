@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "StaticJumioLibrary",
-            targets: ["StaticJumioLibrary", "JumioCore"]),
+            targets: ["StaticJumioLibrary", "JumioMobileSDK-3.9.4"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,6 +22,6 @@ let package = Package(
         .target(
             name: "StaticJumioLibrary",
             dependencies: []),
-        .binaryTarget(name: "JumioCore", url: "https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.4/ios-jumio-mobile-sdk-3.9.4.zip", checksum: "76fae770aee8993c8d210583bdf7ed73e3c0c890838df570367787cf68fb084a")
+        .binaryTarget(name: "JumioMobileSDK-3.9.4", url: "https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.4/ios-jumio-mobile-sdk-3.9.4.zip", checksum: "76fae770aee8993c8d210583bdf7ed73e3c0c890838df570367787cf68fb084a")
     ]
 )
