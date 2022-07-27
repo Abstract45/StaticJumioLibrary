@@ -22,6 +22,6 @@ let package = Package(
         .target(
             name: "StaticJumioLibrary",
             dependencies: []),
-        .binaryTarget(name: "Jumio", url: "https://github.com/Jumio/mobile-sdk-ios/archive/refs/tags/v4.2.0.zip", checksum: "387fb4fe83ef5a7a597009ed00d6f03ef2858b57")
+        .binaryTarget(name: "Jumio", url: "https://mobile-sdk.jumio.com/com/jumio/ios/jumio-mobile-sdk/3.9.4/ios-jumio-mobile-sdk-3.9.4.zip", checksum: "76fae770aee8993c8d210583bdf7ed73e3c0c890838df570367787cf68fb084a")
     ]
 )
